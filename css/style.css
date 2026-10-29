@@ -306,7 +306,7 @@
 .box-contop {
   width: 100%;
   aspect-ratio: 478 / 800;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.435), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.189)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_3396.webp");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.435), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.263)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_3396.webp");
   background-position: 0% 100%;
   background-size: 125%;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@
 }
 
 .img-top {
-  width: 10%;
+  width: 12%;
   padding-top: 8%;
 }
 
