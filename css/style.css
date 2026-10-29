@@ -1,0 +1,1490 @@
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+    url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora Regular";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+    url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(".../fonts/Lora-Italic.woff2") format("woff2"),
+    url("../fonts/Lora-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+    url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UVN Ke Chuyen3";
+  src: url("../fonts/UVNKeChuyen3.woff2") format("woff2"),
+    url("../fonts/UVNKeChuyen3.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UVNKe Chuyen3";
+  src: url("../fonts/UVN Ke Chuyen3.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+    url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+    url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN-Aaron Script";
+  src: url("../fonts/SVN-AaronScript.woff2") format("woff2"),
+    url("../fonts/SVN-AaronScript.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pinyon Script";
+  src: url("../fonts/PinyonScript-Regular.woff2") format("woff2"),
+    url("../fonts/PinyonScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVG-Gotham";
+  src: url("../fonts/SVN-Gotham.svg") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-lora: "Lora";
+  --font-uvn: "UVN Ke Chuyen3";
+  --font-uvn1: "UVN Ke Chuyen1";
+  --font-uvn2: "UVN Ke Chuyen2";
+  --font-pinyon: "Pinyon Script";
+  --font-svn: "SVN-Aaron Script";
+  --primary-color: black;
+  --header-color: #8b907b;
+}
+
+/* Hiệu ứng fade-down */
+.kinhmoi,
+.lb-inv {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.kinhmoi.visible,
+.lb-inv.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hiệu ứng fade-up */
+.lb-time,
+.lb-add,
+.timeline,
+.in-fe,
+.container-check,
+.inp-ten,
+.lb-text,
+#loi-chuc {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  margin-bottom: 2%;
+}
+
+.lb-time.visible,
+.lb-add.visible,
+.timeline.visible,
+.in-fe.visible,
+.container-check.visible,
+.inp-ten.visible,
+.lb-text.visible,
+#loi-chuc.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hiệu ứng fade-right */
+.box-nu,
+.img1 {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.box-nu.visible,
+.img1.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Hiệu ứng fade-left */
+.box-nam,
+.img2 {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.box-nam.visible,
+.img2.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Hiệu ứng zoom-in */
+.timeline-top,
+.lb-dress1,
+.lb-dress2,
+.til1,
+.til2,
+.img-time,
+.img-time2,
+.box-album2,
+.xacnhan {
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.timeline-top.visible,
+.lb-dress1.visible,
+.lb-dress2.visible,
+.til1.visible,
+.til2.visible,
+.img-time.visible,
+.img-time2.visible,
+.box-album2.visible,
+.xacnhan.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Loading screen container */
+.loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation keyframes */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-popup {
+  font-family: var(--font-lora);
+}
+
+.text-color {
+  color: var(--header-color);
+}
+
+.custom-title {
+  font-weight: bold;
+}
+
+.custom-confirm-button {
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #111;
+  padding: 10px 20px !important;
+  margin: 5px 20px !important;
+  border-radius: 20px !important;
+  font-style: normal;
+  background-color: transparent;
+  color: #111;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.container {
+  width: 480px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  margin: 0 auto;
+  overflow: hidden;
+  border-right: 1px solid #111;
+  border-left: 1px solid #111;
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+.container-wrapper {
+  width: 100%;
+}
+
+.box-top {}
+
+.box-contop {
+  width: 100%;
+  aspect-ratio: 478 / 800;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.435), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.189)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_3396.webp");
+  background-position: 0% 100%;
+  background-size: 125%;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  /* padding-top: 52px; */
+  border: none;
+}
+
+.img-top {
+  width: 10%;
+  padding-top: 8%;
+}
+
+.box-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 118%;
+}
+
+.dotwelcome {
+  font-size: 3px;
+  margin: 0 5px;
+  display: inline-block;
+  align-self: center;
+}
+
+.lb-top {
+  display: inline-block;
+  align-self: center;
+  font-family: var(--font-pinyon);
+  font-size: 18px;
+}
+
+.lb-top2 {
+  display: block;
+  font-family: "Lora Regular", sans-serif;
+  font-size: 11.6px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.lb-top3 {
+  display: block;
+  font-family: var(--font-pinyon);
+  font-size: 30.8px;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+
+.info,
+.parents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info hr {
+  width: 30%;
+  border-top: 1px solid var(--primary-color);
+}
+
+.parents {
+  margin-top: 50px;
+}
+
+.parents label {
+  margin-bottom: 2%;
+}
+
+.lb-parents {
+  font-family: var(--font-lora);
+  font-size: 12.4px;
+}
+
+.box-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% 0;
+  width: 12%;
+}
+
+.box-flow img {
+  max-height: 120px;
+}
+
+.divider-img {
+  margin: 50px 0;
+  width: 100%;
+}
+
+.divider-2 {
+  width: 100%;
+}
+
+.box-flow-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% 0;
+  width: 34%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-flow {
+  width: 100%;
+}
+
+.inv,
+.time-add,
+.box-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.box-map {
+  width: 75%;
+}
+
+.inv label.lb-inv {
+  font-size: 32px;
+}
+
+.kinhmoi {
+  font-family: var(--font-lora);
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 1.8;
+  margin-bottom: 5px;
+}
+
+.nhatrai {
+  font-family: var(--font-lora);
+  text-transform: uppercase;
+  font-size: 13.2px;
+  margin-bottom: 5px;
+}
+
+.lb-inv {
+  font-family: var(--font-pinyon);
+  font-size: 32.8px;
+}
+
+.img-inv {
+  width: 70%;
+  aspect-ratio: 2 / 3;
+  margin: 10% 0;
+  background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/TOF_9586.webp') no-repeat 100% 100% / 100%;
+}
+
+.time-add {
+  margin: 24px 0 30px;
+}
+
+.lb-time {
+  font-family: var(--font-lora);
+  font-size: 13.2px;
+}
+
+.lb-add {
+  font-family: var(--font-pinyon);
+  font-size: 38.8px;
+}
+
+.add2 {
+  font-family: var(--font-lora);
+  font-size: 13.2px;
+  line-height: 1.5;
+}
+
+.maps {
+  width: 60%;
+  border: 2px solid var(--primary-color);
+  text-decoration: none;
+  font-family: var(--font-lora);
+  color: var(--primary-color);
+  font-size: 13.2px;
+  border-radius: 20px;
+  margin: 2% 0 20%;
+  padding: 2px 0;
+}
+
+.box-timeline,
+.timeline-top,
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.box-timeline,
+.timeline-top {
+  display: flex;
+  text-align: center;
+}
+
+.box-timeline .description,
+.box-timeline .sub-description {
+  margin: 0 12% 2%;
+  font-size: 11px;
+}
+
+.lb-timeline1 {
+  font-family: var(--font-pinyon);
+  font-size: 2em;
+}
+
+.lb-timeline2 {
+  font-family: var(--font-lora);
+  font-size: 0.6em;
+  letter-spacing: 0.5px;
+}
+
+.img-timeline {
+  width: 26%;
+  margin-bottom: 10%;
+}
+
+.lb-timeline {
+  font-family: var(--font-lora);
+  font-size: 0.9em;
+  word-spacing: 1px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.timeline-top {
+  margin: 15% 0 2%;
+}
+
+.timeline {
+  margin: 30px 0;
+}
+
+.box-dresscode {
+  color: var(--primary-color);
+  width: 100%;
+}
+
+.box-dresscode .dress-top .description {
+  margin: 3% 12% 0;
+  font-size: 11px;
+}
+
+.box-dresscode .colors-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1%;
+  margin-top: 5%;
+}
+
+.box-dresscode .colors-grid .item {
+  max-width: 30px;
+  width: 100%;
+}
+
+.box-dresscode .colors-grid .item .color {
+  max-width: 30px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #0000002e;
+}
+
+.box-dress,
+.dress-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.lb-dress1 {
+  font-family: var(--font-pinyon);
+  font-size: 2.2em;
+  margin-top: 25%;
+}
+
+.lb-dress2 {
+  font-family: var(--font-lora);
+  font-size: 0.5em;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+}
+
+.lb-color {
+  font-size: .7em;
+}
+
+.box-image1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  margin-top: 10%;
+}
+
+.img1,
+.img2 {
+  width: 47%;
+  aspect-ratio: 2 / 3;
+  background: var(--header-color);
+}
+
+.img1 {
+  background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_5725.webp') no-repeat 40% 60% / 170%;
+}
+
+.img2 {
+  background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_5803.webp') no-repeat 60% 80% / 250%;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  max-width: 470px;
+  /* chỉnh kích thước */
+  width: 100%;
+  aspect-ratio: 470 / 700;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 72%;
+}
+
+/* Dots */
+.dots {
+  margin-top: 4%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  max-width: 14px;
+  width: 100%;
+  aspect-ratio: 14 / 14;
+  margin: 0 1%;
+  background-color: #c7c9bf;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.active {
+  background-color: #505738;
+}
+
+.img-flow3 {
+  width: 30%;
+  margin: 50px 0 20px;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn {
+  position: absolute;
+  max-width: 40px;
+  width: 100%;
+  aspect-ratio: 40 / 40;
+  padding: 1%;
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+  color: #111;
+}
+
+
+/* ====FORM+============== */
+
+form {
+  color: var(--primary-color);
+}
+
+form .logo {
+  padding-top: 30px;
+}
+
+.feed-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 5% 0;
+}
+
+.lb-form {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+}
+
+.lb-form1 {
+  font-family: var(--font-pinyon);
+  font-size: 2.5em;
+}
+
+.lb-dot {
+  font-size: 6px;
+  margin: 30px 0;
+}
+
+.lb-dot-card {
+  margin-bottom: 4%;
+}
+
+.in-fe {
+  font-family: var(--font-lora);
+  font-size: 10px;
+  word-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 8% 4%;
+}
+
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  /* overflow: hidden; */
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  /* white-space: nowrap; */
+}
+
+.container-check {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-family: var(--font-lora);
+  font-weight: 300;
+}
+
+.box-feed:checked+label {
+  color: #fff;
+  background-color: black;
+}
+
+.box-feed {
+  border-radius: 20px;
+  width: 100px;
+}
+
+.box-check {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-lora);
+  border-radius: 20px;
+  /*margin: 0 15px;*/
+}
+
+.box-feed:checked+label {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.box-feed {
+  border-radius: 20px;
+}
+
+.box-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.lb-text {
+  font-family: var(--font-lora);
+  font-size: 0.7em;
+  margin: 5% 0 1%;
+}
+
+.til-check {
+  /* margin: 0 auto; */
+  font-style: normal;
+  font-size: 0.7em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.attend-check {
+  padding: 0 2%;
+}
+
+.attend-check .check-box {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 1% 2%;
+  margin: 2% 2%;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+}
+
+.dietary-check .check-box {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 1% 2%;
+  line-height: 1;
+  margin: 2% 4%;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+}
+
+.box-feed:checked+label {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.check-box:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.box-ten {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: var(--font-lora);
+  margin: 10px 0 0;
+}
+
+.box-ten textarea {
+  width: 92%;
+}
+
+.inp-ten {
+  width: 92%;
+  text-align: left;
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  font-size: 13px;
+  font-weight: 300;
+  padding: 1% 2%;
+  margin-bottom: 2%;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 0.75em;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  resize: vertical;
+  /* Cho phép thay đổi chiều cao */
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: var(--font-lora);
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.xacnhan {
+  font-size: 0.7em;
+  background: var(--primary-color);
+  color: #fff;
+  margin-top: 5%;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  width: 40%;
+  padding: 2% 0;
+  font-weight: 300;
+  font-family: var(--font-lora);
+}
+
+.xacnhan:hover {
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.card {
+  background: #505738;
+  color: white;
+  max-width: 88%;
+  margin: 0 auto;
+  padding: 6%;
+  border-radius: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  /* các dòng bình thường canh đều */
+  text-align-last: center;
+  text-transform: uppercase;
+  margin-bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card p {
+  font-size: 0.6rem;
+  margin-bottom: 2%;
+  font-family: var(--font-lora);
+}
+
+.card .divider {
+  font-size: 0.7rem;
+  margin: 10px 0;
+}
+
+.container-qr-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-btn {
+  background: white;
+  color: #3e4a2c;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 1.5% 8%;
+  margin: 2%;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+  font-family: var(--font-lora);
+  font-size: 11px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.send-btn {
+  width: 160px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  padding: 5px 10px;
+  margin: 5px 14px;
+  border-radius: 20px;
+  font-style: normal;
+  background-color: #fff;
+  font-family: var(--font-lora);
+
+  font-size: 11px;
+}
+
+.send-btn:hover {
+  background: #ddd;
+}
+
+.flower {
+  margin: 4% 0;
+  width: 100%;
+}
+
+.flower img {
+  width: 10%;
+}
+
+.end {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.456), rgba(255, 255, 255, 0.487)), url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_6107.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 412 / 786;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  color: black;
+  padding-bottom: 15%;
+  position: relative;
+}
+
+.img-qr {
+  width: 40%;
+  margin: 5% 0 75%;
+}
+
+.lb-thank {
+  font-family: var(--font-pinyon);
+  font-size: 35px;
+  color: black;
+}
+
+.lb-end {
+  font-family: var(--font-lora);
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  margin: 1% 5%;
+  text-transform: uppercase;
+}
+
+.yen {
+  font-family: var(--font-lora);
+  font-size: 0.6em;
+  position: absolute;
+  bottom: 1%;
+}
+
+/* invitation-card */
+.invitation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.invitation-card {
+  background-image: url("../anh/g908.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 98% auto;
+  max-width: 100%;
+  height: 100vh;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #fbf8e9ff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-card .header-text {
+  font-family: "UVNKe Chuyen3", sans-serif;
+  font-size: 0.73rem;
+  font-weight: normal;
+  color: #232916ff;
+  padding-top: 100px;
+}
+
+.invitation-card .names-section {
+  font-family: "Pinyon Script", sans-serif;
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: var(--header-color);
+  padding-top: 10px;
+}
+
+.invitation-card .monogram {
+  padding-top: 86px;
+}
+
+.invitation-card .save-date,
+.invitation-card .celebration-text {
+  font-family: "SVG-Gotham", sans-serif;
+  font-size: 0.5rem;
+  font-weight: normal;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.invitation-card .save-date {
+  padding-top: 86px;
+}
+
+.invitation-card .celebration-text {
+  padding-top: 8px;
+}
+
+.invitation-card .buttons-section {
+  padding-top: 25px;
+  padding-bottom: 150px;
+}
+
+.invitation-card .invitation-button {
+  font-family: "SVG-Gotham", sans-serif;
+  font-size: 0.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--header-color);
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(159, 122, 234, 0.3);
+  display: inline-block;
+  padding: 3px 24px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid var(--header-color);
+  min-width: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Đảm bảo box-circle luôn cố định và không ảnh hưởng đến nội dung trang */
+.box-circle {
+  position: fixed;
+  /* Đảm bảo box-circle luôn cố định trên màn hình */
+  bottom: 20px;
+  /* Đẩy box-circle xuống một chút từ trên cùng */
+  right: 20px;
+  /* Căn box-circle về phía bên phải */
+  z-index: 9999;
+  /* Đảm bảo box-circle nằm trên các phần tử khác */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lb-circle {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #111;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: var(--font-gotham);
+  text-align: center;
+  line-height: 10px;
+}
+
+/* Thêm hiệu ứng hover cho label */
+.lb-circle:hover {
+  color: #3498db;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  /* Đảm bảo hình ảnh không bị tràn ra ngoài */
+  transition: transform 0.5s ease;
+  /* Chuyển động mượt mà */
+  z-index: 2;
+}
+
+/* Khi hình tròn được hover */
+.circle:hover {
+  transform: scale(1.1);
+  /* Tăng kích thước hình tròn khi hover */
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
+}
+
+/* Hình ảnh bên trong hình tròn */
+.circle-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Hiệu ứng xoay liên tục */
+.circle.spin {
+  animation: spin 1s linear infinite;
+  /* Xoay liên tục */
+}
+
+.wish-box {
+  width: 100%;
+  max-width: 600px;
+  /* giới hạn chiều rộng */
+  min-height: 120px;
+  margin: 20px auto;
+
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 40px 20px;
+  font-family: var(--font-lora);
+
+  font-size: 11px;
+  text-align: center;
+  /* chữ nhập vào nằm giữa */
+  color: #333;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  resize: none;
+  /* không cho resize */
+  outline: none;
+  /* bỏ viền khi focus */
+}
+
+/* placeholder style */
+.wish-box::placeholder {
+  color: #999;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.qrcode-box {
+  display: flex;
+  justify-content: center;
+}
+
+.qrcode-box .item {
+  width: 50%;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qrcode-box .item .info {
+  margin-bottom: 2%;
+}
+
+.qrcode-box .item .qrcode-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrcode-box .item .qrcode-img img {
+  width: 60%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+div:where(.swal2-container) div:where(.swal2-html-container) {
+  padding: 0 !important;
+  ;
+}
+
+/* QR code */
+div:where(.swal2-container) img:where(.swal2-image) {
+  margin: 0 auto 1em !important;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: 50% 63%;
+}
+
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-back {
+  background-image: url("../chien-diem/fonts/./anh/back-02.png");
+  padding-bottom: 50px;
+}
+
+/* music */
+.player {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  max-width: 50px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 9999;
+  border: 1px solid var(--text-title-color);
+}
+
+.player #iconSvg {
+  width: 100%;
+  height: 100%;
+  fill: var(--text-title-color);
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+/* ================================ */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .lb-top {
+    font-size: calc((18 / 480) * 100vw);
+  }
+
+  .lb-top2,
+  .lb-timeline2 {
+    font-size: calc((11.6 / 480) * 100vw);
+  }
+
+  .lb-top3 {
+    font-size: calc((30.8 / 480) * 100vw);
+    ;
+  }
+
+  .box-image {
+    margin-left: -15px;
+  }
+
+  .imge {
+    width: 40%;
+  }
+
+  .in-fe {
+    font-size: calc((10 / 480) * 100vw);
+  }
+
+  .lb-add {
+    font-size: calc((36.8 / 480) * 100vw);
+  }
+
+  .lb-line1,
+  .lb-name {
+    font-size: 2.7em;
+  }
+
+  .kinhmoi {
+    font-size: calc((10 / 480) * 100vw);
+    width: 98%;
+  }
+
+  .nhatrai {
+    font-size: calc((13.2 / 480) * 100vw);
+  }
+
+  .inv label.lb-inv,
+  .lb-timeline1 {
+    font-size: calc((32 / 480) * 100vw);
+  }
+
+  .lb-parents {
+    font-size: calc((12.4 / 480) * 100vw);
+  }
+
+  .lb-time,
+  .add2,
+  .maps,
+  .lb-color,
+  .lb-text,
+  .xacnhan {
+    font-size: calc((13.2 / 480) * 100vw);
+  }
+
+  .til-check {
+    font-size: calc((11.2 / 480) * 100vw);
+  }
+
+  .lb-timeline,
+  .box-dresscode .dress-top .description,
+  .box-timeline .description {
+    font-size: calc((11 / 480) * 100vw);
+  }
+
+  .box-dresscode .colors-grid .item,
+  .box-dresscode .colors-grid .item .color {
+    max-width: calc((30 / 480) * 100vw);
+  }
+
+  .lb-dress1 {
+    font-size: calc((35.2 / 480) * 100vw);
+  }
+
+  .lb-dress2 {
+    font-size: calc((8 / 480) * 100vw);
+  }
+
+  .dot {
+    max-width: calc((14 / 480) * 100vw);
+  }
+
+  .btn {
+    max-width: calc((40 / 480) * 100vw);
+    font-size: calc((18 / 480) * 100vw);
+  }
+
+  .lb-form1 {
+    font-size: calc((40 / 480) * 100vw);
+  }
+
+  .inp-ten {
+    font-size: calc((13 / 480) * 100vw);
+  }
+
+  textarea {
+    font-size: calc((12 / 480) * 100vw);
+  }
+
+  .card p,
+  .lb-end,
+  .yen {
+    font-size: calc((9.6 / 480) * 100vw);
+  }
+
+  .qr-btn {
+    font-size: calc((11 / 480) * 100vw);
+  }
+
+  .qrcode-box .item {
+    font-size: calc((13 / 480) * 100vw);
+  }
+
+  div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    font-size: calc((16 / 480) * 100vw);
+  }
+
+  .lb-thank {
+    font-size: calc((35 / 480) * 100vw);
+  }
+
+  .player {
+    max-width: calc((50 / 480) * 100vw);
+  }
+}
