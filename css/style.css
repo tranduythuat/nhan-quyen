@@ -374,7 +374,7 @@
 }
 
 .parents {
-  margin-top: 50px;
+  margin-top: 10%;
 }
 
 .parents label {
@@ -384,7 +384,7 @@
 .lb-parents {
   font-family: var(--font-lora);
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: .8px;
 }
 
 .box-flow {
@@ -396,7 +396,8 @@
 }
 
 .box-flow img {
-  max-height: 120px;
+  width: 100%;
+  height: auto;
 }
 
 .divider-img {
@@ -441,13 +442,13 @@
 }
 
 .inv label.lb-inv {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .kinhmoi {
   font-family: var(--font-lora);
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
   margin-bottom: 5px;
 }
@@ -472,7 +473,7 @@
 }
 
 .time-add {
-  margin: 24px 0 30px;
+  margin: 5% 0 6%;
 }
 
 .lb-time {
@@ -523,13 +524,13 @@
 
 .box-timeline .description,
 .box-timeline .sub-description {
-  margin: 0 12% 2%;
+  margin: 0 0 2%;
   font-size: 11px;
 }
 
 .lb-timeline1 {
   font-family: var(--font-pinyon);
-  font-size: 2em;
+  font-size: 36px;
 }
 
 .lb-timeline2 {
@@ -539,13 +540,14 @@
 }
 
 .img-timeline {
-  width: 26%;
+  max-width: 42px;
+  width: 100%;
   margin-bottom: 10%;
 }
 
 .lb-timeline {
   font-family: var(--font-lora);
-  font-size: 0.9em;
+  font-size: 14px;
   word-spacing: 1px;
   color: var(--primary-color);
   text-transform: uppercase;
@@ -556,7 +558,7 @@
 }
 
 .timeline {
-  margin: 30px 0;
+  margin: 14% 0;
 }
 
 .box-dresscode {
@@ -750,7 +752,7 @@ form .logo {
 
 .lb-dot {
   font-size: 6px;
-  margin: 30px 0;
+  margin: 12% 0;
 }
 
 .lb-dot-card {
@@ -1373,7 +1375,6 @@ div:where(.swal2-container) img:where(.swal2-image) {
 
   .lb-top3 {
     font-size: calc((30.8 / 480) * 100vw);
-    ;
   }
 
   .box-image {
@@ -1389,7 +1390,7 @@ div:where(.swal2-container) img:where(.swal2-image) {
   }
 
   .lb-add {
-    font-size: calc((36.8 / 480) * 100vw);
+    font-size: calc((38.8 / 480) * 100vw);
   }
 
   .lb-line1,
@@ -1398,8 +1399,7 @@ div:where(.swal2-container) img:where(.swal2-image) {
   }
 
   .kinhmoi {
-    font-size: calc((10 / 480) * 100vw);
-    width: 98%;
+    font-size: calc((12 / 480) * 100vw);
   }
 
   .nhatrai {
@@ -1408,11 +1408,12 @@ div:where(.swal2-container) img:where(.swal2-image) {
 
   .inv label.lb-inv,
   .lb-timeline1 {
-    font-size: calc((32 / 480) * 100vw);
+    font-size: calc((36 / 480) * 100vw);
   }
 
   .lb-parents {
-    font-size: calc((12.4 / 480) * 100vw);
+    font-size: calc((15 / 480) * 100vw);
+    letter-spacing: calc((0.8 / 480) * 100vw);
   }
 
   .lb-time {
@@ -1432,7 +1433,10 @@ div:where(.swal2-container) img:where(.swal2-image) {
     font-size: calc((11.2 / 480) * 100vw);
   }
 
-  .lb-timeline,
+  .lb-timeline {
+    font-size: calc((14 / 480) * 100vw);
+  }
+
   .box-dresscode .dress-top .description,
   .box-timeline .description {
     font-size: calc((11 / 480) * 100vw);
@@ -1501,5 +1505,9 @@ div:where(.swal2-container) img:where(.swal2-image) {
 
   .player {
     max-width: calc((50 / 480) * 100vw);
+  }
+
+  .img-timeline {
+    max-width: calc((42 / 480) * 100vw);
   }
 }

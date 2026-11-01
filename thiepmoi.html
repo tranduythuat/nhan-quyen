@@ -15,6 +15,7 @@
     <!-- <meta property="og:url" content="" /> -->
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lang.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
         type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
@@ -35,6 +36,22 @@
     <div id="loading-container" class="loading-container">
         <div class="spinner"></div>
     </div>
+    <!-- Language select popup - shown on first visit -->
+    <div id="langOverlay" class="lang-overlay">
+        <div class="lang-popup">
+            <div class="lang-popup-title">Chọn ngôn ngữ <br>/Select language/</div>
+            <!-- <div class="lang-popup-subtitle">
+              Vui lòng chọn ngôn ngữ hiển thị / Please choose your preferred language
+            </div> -->
+            <div class="lang-popup-buttons">
+                <button type="button" class="lang-btn" data-lang="vi">Tiếng Việt</button>
+                <button type="button" class="lang-btn" data-lang="en">English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Small switcher to change language any time -->
+    <button type="button" id="langSwitcher" class="lang-switcher" aria-label="Switch language"></button>
     <div class="container">
         <div class="container-wrapper">
             <div class="box-top">
@@ -52,9 +69,11 @@
 
             <div class="info nha-gai">
                 <div class="parents">
-                    <label for="" class="lb-parents"> Nhà Trai: Ông Nguyễn Tuyển và Bà Nguyễn Thị Thơm
+                    <label for="" class="lb-parents" data-i18n="invitation.groom_parents"> Nhà Trai: Ông Nguyễn Tuyển và
+                        Bà Nguyễn Thị Thơm
                     </label>
-                    <label for="" class="lb-parents">Nhà Gái: Nguyễn Trúc Phương và Bà Lê Thị Đông Xuân
+                    <label for="" class="lb-parents" data-i18n="invitation.bride_parents">Nhà Gái: Nguyễn Trúc Phương và
+                        Bà Lê Thị Đông Xuân
                     </label>
                 </div>
 
@@ -331,9 +350,11 @@
         <button class="player" id="player-btn" aria-label="Play/Pause">
             <img id="iconSvg" src="anh/cd.png" alt="Music Icon">
         </button>
-        <audio id="audio" preload="auto" src="audio/Christina Perri - A Thousand Years [NZGHXy1IAHM] (mp3cut.net).mp3"
+        <audio id="audio" preload="auto"
+            src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/ngoc-phuc/EM%20%C4%90%E1%BB%92NG%20%C3%9D%20(I%20DO)%20-%20%C4%90%E1%BB%A8C%20PH%C3%9AC%20x%20911%20x%20KH%E1%BA%AEC%20H%C6%AFNG%20OFFICIAL%20MUSIC%20VIDEO%20VALENTINE%202023.mp3"
             loop type="audio/mpeg"></audio>
     </div>
+    <script src="js/i18n.js"></script>
     <script>
         window.onload = function () {
             // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
@@ -548,6 +569,10 @@
 
         const btn = document.getElementById('player-btn');
         btn.addEventListener('click', toggleMusic);
+
+        document.addEventListener("langchange", () => {
+            toggleMusic();
+        });
     </script>
     <script>
         // const qrcode = document.getElementById('qr-btn');
