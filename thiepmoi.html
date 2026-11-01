@@ -69,7 +69,7 @@
 
             <div class="info nha-gai">
                 <div class="parents">
-                    <label for="" class="lb-parents" data-i18n="invitation.groom_parents"> Nhà Trai: Ông Nguyễn Tuyển và
+                    <label for="" class="lb-parents" data-i18n="invitation.groom_parents">Nhà Trai: Ông Nguyễn Tuyển và
                         Bà Nguyễn Thị Thơm
                     </label>
                     <label for="" class="lb-parents" data-i18n="invitation.bride_parents">Nhà Gái: Nguyễn Trúc Phương và
@@ -566,12 +566,25 @@
             });
         }
 
+        const tryPlayAudio = () => {
+            if (!audio.src || !audio.paused) return;
+            audio.play().catch(() => {
+                // Browser blocks autoplay outside a user gesture; ignore here
+            });
+
+            audio.addEventListener('play', () => {
+                iconSvg.classList.add('spin');
+            });
+            audio.addEventListener('pause', () => {
+                iconSvg.classList.remove('spin');
+            });
+        };
 
         const btn = document.getElementById('player-btn');
         btn.addEventListener('click', toggleMusic);
 
         document.addEventListener("langchange", () => {
-            toggleMusic();
+            tryPlayAudio();
         });
     </script>
     <script>
