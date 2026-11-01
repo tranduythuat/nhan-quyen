@@ -305,8 +305,9 @@
 
 .box-contop {
   width: 100%;
-  aspect-ratio: 478 / 800;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.435), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.263)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_3396.webp");
+  aspect-ratio: 478 / 734;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.435), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.263)), url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/album_1/4.jpg");
+
   background-position: 0% 100%;
   background-size: 125%;
   background-repeat: no-repeat;
@@ -356,7 +357,7 @@
   font-family: var(--font-pinyon);
   font-size: 30.8px;
   font-weight: 300;
-  padding-bottom: 50px;
+  padding-bottom: 5%;
 }
 
 .info,
@@ -382,7 +383,8 @@
 
 .lb-parents {
   font-family: var(--font-lora);
-  font-size: 12.4px;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 .box-flow {
@@ -475,7 +477,9 @@
 
 .lb-time {
   font-family: var(--font-lora);
-  font-size: 13.2px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
 }
 
 .lb-add {
@@ -570,7 +574,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1%;
+  gap: 4%;
   margin-top: 5%;
 }
 
@@ -1030,7 +1034,7 @@ textarea::placeholder {
 }
 
 .end {
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.456), rgba(255, 255, 255, 0.487)), url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_6107.webp');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.518), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.211)), url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/nhan-quyen/RW1_6107.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1039,29 +1043,31 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   text-align: center;
-  color: black;
-  padding-bottom: 15%;
+  color: white;
   position: relative;
+  padding-top: 20%;
 }
 
 .img-qr {
   width: 40%;
-  margin: 5% 0 75%;
+  margin: 80% 0 5%;
+  border-radius: 4px;
 }
 
 .lb-thank {
   font-family: var(--font-pinyon);
   font-size: 35px;
-  color: black;
+  color: white;
 }
 
 .lb-end {
   font-family: var(--font-lora);
-  font-size: 0.6em;
-  letter-spacing: 1px;
-  margin: 1% 5%;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  margin: 1% 5% 10%;
   text-transform: uppercase;
 }
 
@@ -1409,7 +1415,11 @@ div:where(.swal2-container) img:where(.swal2-image) {
     font-size: calc((12.4 / 480) * 100vw);
   }
 
-  .lb-time,
+  .lb-time {
+    font-size: calc((17 / 480) * 100vw);
+    letter-spacing: calc((1.2 / 480) * 100vw);
+  }
+
   .add2,
   .maps,
   .lb-color,
@@ -1462,8 +1472,13 @@ div:where(.swal2-container) img:where(.swal2-image) {
     font-size: calc((12 / 480) * 100vw);
   }
 
+  .lb-end {
+    font-size: calc((12 / 480) * 100vw);
+    letter-spacing: calc((1.2 / 480) * 100vw);
+  }
+
   .card p,
-  .lb-end,
+
   .yen {
     font-size: calc((9.6 / 480) * 100vw);
   }
