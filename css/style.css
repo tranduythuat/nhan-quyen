@@ -383,8 +383,8 @@
 
 .lb-parents {
   font-family: var(--font-lora);
-  font-size: 15px;
-  letter-spacing: .8px;
+  font-size: 14px;
+  /* letter-spacing: .8px; */
 }
 
 .box-flow {
@@ -542,7 +542,7 @@
 .img-timeline {
   max-width: 42px;
   width: 100%;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
 }
 
 .lb-timeline {
@@ -557,8 +557,12 @@
   margin: 15% 0 2%;
 }
 
+.box-icontime {
+  width: 100%;
+}
+
 .timeline {
-  margin: 14% 0;
+  margin: 8% 0;
 }
 
 .box-dresscode {
@@ -1412,8 +1416,8 @@ div:where(.swal2-container) img:where(.swal2-image) {
   }
 
   .lb-parents {
-    font-size: calc((15 / 480) * 100vw);
-    letter-spacing: calc((0.8 / 480) * 100vw);
+    font-size: calc((14 / 480) * 100vw);
+    /* letter-spacing: calc((0.8 / 480) * 100vw); */
   }
 
   .lb-time {
