@@ -1058,7 +1058,7 @@ textarea::placeholder {
 
 .img-qr {
   width: 40%;
-  margin: 80% 0 5%;
+  margin: 0% 0 2%;
   border-radius: 4px;
 }
 
@@ -1066,6 +1066,7 @@ textarea::placeholder {
   font-family: var(--font-pinyon);
   font-size: 35px;
   color: white;
+  margin-top: 83%;
 }
 
 .lb-end {

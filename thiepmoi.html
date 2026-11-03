@@ -413,7 +413,7 @@
 
     </script>
     <script>
-        const scripConfirmtURL = '?sheet=confirm';
+        const scripConfirmtURL = 'https://script.google.com/macros/s/AKfycbzUFvqHbHOD-ryGh7Maw0REawThV4U0d4u3HkuC_G2hQZN995JqF2j_uwpef2JxVpwdMg/exec?sheet=confirm';
         const form = document.forms['steven-khanh'];
 
         form.addEventListener('submit', e => {
@@ -425,10 +425,9 @@
             let data = Object.fromEntries(formData.entries());
             const confirm = data.CONFIRM;
             const name = data.NAME;
-            const guest_info = data.GUEST;
-            const timeToSG = data.DATE_BACK_SG;
+            const guests_number = data.GUESTS_NUMBER;
             const dietary = data.dietary;
-            const dietary_note = data.DIETARY_NOTE;
+            const wish = data.WISH;
 
             // Gửi dữ liệu form đi
             fetch(scripConfirmtURL, {
@@ -436,10 +435,9 @@
                 body: new URLSearchParams({
                     name,
                     confirm,
-                    guest_info,
-                    timeToSG,
+                    guests_number,
                     dietary,
-                    dietary_note
+                    wish
                 })
             })
                 .then(response => {
